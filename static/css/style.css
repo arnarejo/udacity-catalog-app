@@ -1,0 +1,73 @@
+body {
+  background-color: #fff;
+}
+
+.custom-nav {
+  background-color: black;
+  height: 50px;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+button {
+  height: 35px;
+  background-color: orange;
+  color: white;
+  margin-top: 5px;
+  font-size: 20px !important;
+}
+.btn {
+  line-height: 0;
+  border-radius: 0;
+}
+a {
+  text-decoration: none !important;
+  color: orange;
+  font-size: 1rem;
+  line-height: 0.55;
+}
+
+a:hover {
+  color: grey;
+}
+
+em {
+  color: grey;
+
+}
+.main {
+  background-color: #ddd;
+  margin: 20px;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.box1 {
+  border-right: 3px solid #ccc;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+input {
+  margin-bottom: 5px;
+}
+
+select {
+  margin-bottom: 5px;
+}
+
+/* footer styling */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}

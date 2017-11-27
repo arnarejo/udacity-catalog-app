@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div>
+
+  <h4>Edit Item </h4>
+  <p>Title: </p>
+  <form action= "{{url_for('editItem', item_name=item.name)}}" method = 'POST'>
+
+    <input type="text" value="{{item.name }}" name="name">
+
+    <p>Description: </p>
+    <input type="text" value="{{item.description }}" name="description">
+    <p>Category: </p>
+    
+    <select name="category">
+
+      {% for category in categories %}
+
+      {% if category.name == item.category_name %}
+      <option value="{{ category.name }}" selected>{{ category.name }}</option>
+      {% else %}
+      <option value="{{ category.name }}">{{ category.name }}</option>
+      {% endif %}
+
+      {% endfor %}
+    </select>
+    <br>
+
+    <input type="submit" text="Submit">
+  </div>
+</form>
+{% endblock %}

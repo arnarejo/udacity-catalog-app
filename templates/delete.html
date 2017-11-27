@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div>
+
+  <h4>Are you sure you want to delete {{itemToDelete.name}} ?</h4>
+  <form action="{{ url_for('deleteItem', item_name=itemToDelete.name) }}" method="POST">
+    <input type="submit" text="Delete">
+  </form>
+  <a href="{{ url_for('eachItem', category=itemToDelete.category_name, item_name=itemToDelete.name) }}">Cancel</a>
+</div>
+{% endblock %}

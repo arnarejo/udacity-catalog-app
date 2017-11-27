@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="row">
+  <div class="col-md-3 box1">
+    <h4>Categories</h4>
+    {% for category in categories %}
+    <a href="{{ url_for('categoryItems', category=category.name) }}"><p>{{ category.name }}</p></a>
+    {% endfor %}
+  </div>
+
+  <div class="col-md-9 box2">
+    
+    <h4>Latest items</h4>
+    {% for item in items %}
+    <a href="{{ url_for('eachItem', category=item.category_name, item_name=item.name) }}">
+      <p>{{ item.name }} <em>({{item.category_name}})</em></p>
+    </a>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

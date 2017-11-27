@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div>
+  
+  <h4>New Item </h4>
+  <form action="{{ url_for('newItem') }}" method="POST">
+    <p>Title</p>
+    <input type="text" placeholder="item name here" name="name">
+    <p>Description</p>
+    <input type="text" placeholder="item description here" name="description">
+    <p>Category</p>
+    <select name="category">
+
+      {% for category in categories %}
+
+      <option value="{{ category.name }}">{{ category.name }}</option>
+
+      {% endfor %}
+    </select>
+
+    <br>
+    <input type="submit" text="Submit">
+  </form>
+</div>
+{% endblock %}
